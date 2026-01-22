@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Fulado da Silva - Lista de Compras</title>
+    <!-- Importando fontes modernas do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones via Font Awesome para botões mais bonitos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Cabeçalho Principal -->
+        <header>
+            <h1><i class="fa-solid fa-basket-shopping"></i> Supermercado Fulano da Silva</h1>
+            <p>Sua lista de compras inteligente</p>
+        </header>
+
+        <!-- Área de Entrada de Dados (Card Principal) -->
+        <div class="input-card">
+            <!-- Grupo de Inputs -->
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="produto">Produto</label>
+                    <input type="text" id="produto" placeholder="Ex: Arroz 5kg">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="preco">Preço (R$)</label>
+                    <input type="number" id="preco" step="0.01" placeholder="0,00">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="quantidade">Qtd</label>
+                    <input class="input-wrapper-qtd" type="number" id="quantidade" value="1" min="1">
+                </div>
+            </div>
+
+            <!-- Botão de Adicionar -->
+            <button id="btn-adicionar" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Adicionar à Lista
+            </button>
+        </div>
+
+        <!-- Lista de Produtos -->
+        <div class="list-container">
+            <div class="list-header">
+                <span>Produto</span>
+                <span>Preço x Qtd</span>
+                <span>Total</span>
+                <span>Ação</span>
+            </div>
+
+            <!-- A lista será gerada aqui pelo JavaScript -->
+            <ul id="lista-produtos" class="product-list">
+                <!-- Exemplo de item (será removido pelo JS ou mantido como placeholder se vazio) -->
+                <!-- 
+                <li class="list-item">
+                    <div class="item-info">
+                        <span class="item-name">Arroz Branco</span>
+                        <span class="item-details">R$ 20,00 x 2</span>
+                    </div>
+                    <div class="item-actions">
+                        <span class="item-total">R$ 40,00</span>
+                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </li> 
+                -->
+            </ul>
+        </div>
+
+        <!-- Rodapé com Totais -->
+        <div class="summary-card">
+            <div class="total-display">
+                <span>Total Final:</span>
+                <span id="valor-total">R$ 0,00</span>
+            </div>
+            <button id="btn-limpar" class="btn-danger">
+                <i class="fa-solid fa-trash-can"></i> Limpar Lista
+            </button>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

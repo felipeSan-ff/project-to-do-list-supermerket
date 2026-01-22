@@ -1,0 +1,323 @@
+/* Variáveis de Cores e Fontes */
+:root {
+    --primary-color: #2ecc71;
+    /* Verde Fresco */
+    --primary-dark: #27ae60;
+    --secondary-color: #f39c12;
+    /* Laranja Vibrante para detalhes */
+    --danger-color: #e74c3c;
+    --danger-dark: #c0392b;
+    --text-color: #2c3e50;
+    --light-text: #7f8c8d;
+    --background-color: #f0f2f5;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --border-radius: 16px;
+    --font-main: 'Outfit', sans-serif;
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header p {
+    color: var(--light-text);
+    font-size: 1rem;
+}
+
+/* Cards (Glassmorphism Style) */
+.input-card,
+.list-container,
+.summary-card {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Grupos de Input */
+.input-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.8fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-wrapper-qtd {
+    padding: 30px;
+    width: 100px;
+
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+input {
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid #ecf0f1;
+    font-family: var(--font-main);
+    font-size: rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.1);
+}
+
+/* Botões */
+button {
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* Lista de Produtos */
+.list-header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 0.5fr;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #ecf0f1;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.product-list {
+    list-style: none;
+    max-height: 400px;
+    overflow-y: auto;
+    /* Custom Scrollbar */
+    padding-right: 5px;
+}
+
+.product-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.product-list::-webkit-scrollbar-thumb {
+    background-color: #dfe6e9;
+    border-radius: 3px;
+}
+
+.list-item {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 0.5fr;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f2f6;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.item-details {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+.item-total {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.btn-delete {
+    background: transparent;
+    color: #e74c3c;
+    /* Vermelho suave */
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.btn-delete:hover {
+    background: #fdecea;
+    color: var(--danger-dark);
+}
+
+/* Área de Totais */
+.summary-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+    border: none;
+}
+
+.total-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-display span:first-child {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.total-display span:last-child {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.btn-danger {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-danger:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-group {
+        grid-template-columns: 1fr;
+        /* Empilha os inputs */
+    }
+
+    .list-header {
+        display: none;
+        /* Esconde cabeçalho da tabela no mobile para simplificar */
+    }
+
+    .list-item {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 5px;
+        padding: 15px 0;
+    }
+
+    .item-name {
+        grid-column: 1 / -1;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+    }
+
+    .item-details {
+        grid-column: 1;
+    }
+
+    .item-total {
+        grid-column: 1;
+        margin-top: 4px;
+    }
+
+    .btn-delete {
+        grid-column: 2;
+        grid-row: 1 / -1;
+        align-self: center;
+        justify-self: end;
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
