@@ -5,30 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supermercado Fulado da Silva - Lista de Compras</title>
-    <!-- Importando fontes modernas do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Ícones via Font Awesome para botões mais bonitos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
     <div class="container">
-        <!-- Cabeçalho Principal -->
         <header>
             <h1><i class="fa-solid fa-basket-shopping"></i> Supermercado Fulano da Silva</h1>
             <p>Sua lista de compras inteligente</p>
         </header>
 
-        <!-- Área de Entrada de Dados (Card Principal) -->
         <div class="input-card">
-            <!-- Grupo de Inputs -->
             <div class="input-group">
                 <div class="input-wrapper">
                     <label for="produto">Produto</label>
@@ -46,13 +38,11 @@
                 </div>
             </div>
 
-            <!-- Botão de Adicionar -->
             <button id="btn-adicionar" class="btn-primary">
                 <i class="fa-solid fa-plus"></i> Adicionar à Lista
             </button>
         </div>
 
-        <!-- Lista de Produtos -->
         <div class="list-container">
             <div class="list-header">
                 <span>Produto</span>
@@ -61,25 +51,10 @@
                 <span>Ação</span>
             </div>
 
-            <!-- A lista será gerada aqui pelo JavaScript -->
             <ul id="lista-produtos" class="product-list">
-                <!-- Exemplo de item (será removido pelo JS ou mantido como placeholder se vazio) -->
-                <!-- 
-                <li class="list-item">
-                    <div class="item-info">
-                        <span class="item-name">Arroz Branco</span>
-                        <span class="item-details">R$ 20,00 x 2</span>
-                    </div>
-                    <div class="item-actions">
-                        <span class="item-total">R$ 40,00</span>
-                        <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                </li> 
-                -->
             </ul>
         </div>
 
-        <!-- Rodapé com Totais -->
         <div class="summary-card">
             <div class="total-display">
                 <span>Total Final:</span>
@@ -91,7 +66,6 @@
         </div>
     </div>
 
-    <!-- Link para o arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
 
