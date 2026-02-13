@@ -4,69 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercado Fulado da Silva - Lista de Compras</title>
+    <title>Supermercado Fulano da Silva - Bem-vindo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="landing.css">
 </head>
 
 <body>
-
-    <div class="container">
-        <header>
-            <h1><i class="fa-solid fa-basket-shopping"></i> Supermercado Fulano da Silva</h1>
-            <p>Sua lista de compras inteligente</p>
+    <div class="landing-container">
+        <header class="landing-header">
+            <div class="logo">
+                <i class="fa-solid fa-basket-shopping"></i> Fulano da Silva
+            </div>
+            <nav>
+                <a href="#funcionalidades">Como Funciona</a>
+                <a href="app.html" class="nav-btn">Minha Lista</a>
+            </nav>
         </header>
 
-        <div class="input-card">
-            <div class="input-group">
-                <div class="input-wrapper">
-                    <label for="produto">Produto</label>
-                    <input type="text" id="produto" placeholder="Ex: Arroz 5kg">
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="preco">Preço (R$)</label>
-                    <input type="number" id="preco" step="0.01" placeholder="0,00">
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="quantidade">Qtd</label>
-                    <input class="input-wrapper-qtd" type="number" id="quantidade" value="1" min="1">
+        <main class="hero-section">
+            <div class="hero-content">
+                <h1>Sua lista de compras <br> <span class="highlight">inteligente e rápida</span></h1>
+                <p>Abandone o papel e a caneta. Organize suas compras de supermercado de forma simples, controle seus
+                    gastos e nunca mais esqueça nada.</p>
+                <div class="cta-group">
+                    <a href="app.html" class="btn-primary-lg">
+                        Começar Agora <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-
-            <button id="btn-adicionar" class="btn-primary">
-                <i class="fa-solid fa-plus"></i> Adicionar à Lista
-            </button>
-        </div>
-
-        <div class="list-container">
-            <div class="list-header">
-                <span>Produto</span>
-                <span>Preço x Qtd</span>
-                <span>Total</span>
-                <span>Ação</span>
+            <div class="hero-image">
+                <i class="fa-solid fa-cart-shopping floating-icon icon-1"></i>
+                <i class="fa-solid fa-carrot floating-icon icon-2"></i>
+                <i class="fa-solid fa-apple-whole floating-icon icon-3"></i>
+                <div class="circle-bg"></div>
             </div>
+        </main>
 
-            <ul id="lista-produtos" class="product-list">
-            </ul>
-        </div>
-
-        <div class="summary-card">
-            <div class="total-display">
-                <span>Total Final:</span>
-                <span id="valor-total">R$ 0,00</span>
+        <section id="funcionalidades" class="features-section">
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h3>Lista Dinâmica</h3>
+                <p>Adicione e remova itens facilmente enquanto percorre os corredores.</p>
             </div>
-            <button id="btn-limpar" class="btn-danger">
-                <i class="fa-solid fa-trash-can"></i> Limpar Lista
-            </button>
-        </div>
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h3>Cálculo Automático</h3>
+                <p>Saiba quanto vai pagar antes de chegar ao caixa. Controle seu orçamento.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <h3>100% Mobile</h3>
+                <p>Funciona perfeitamente no seu celular, sem precisar instalar nada.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Supermercado Fulano da Silva. Todos os direitos reservados.</p>
+        </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
